@@ -22,6 +22,7 @@ namespace PetShop
 					Debug.WriteLine("Race: " + cat.Race);
 					Debug.WriteLine("Taxonomy: " + cat.Taxonomy);
 					Debug.WriteLine("Weight: " + cat.Weight);
+					Debug.WriteLine("Gender: " + cat.Gender.ToString());
 
 					break;
 				case "dog":
@@ -33,6 +34,7 @@ namespace PetShop
 					Debug.WriteLine("Length: " + dog.Length);
 					Debug.WriteLine("Origin: " + dog.Origin);
 					Debug.WriteLine("Weight: " + dog.Weight);
+					Debug.WriteLine("Gender: " + dog.Gender.ToString());
 					break;
 				case "bunny":
 					Bunny bunny = (Bunny)_animal;
@@ -43,6 +45,7 @@ namespace PetShop
 					Debug.WriteLine("Length: " + bunny.Length);
 					Debug.WriteLine("Order: " + bunny.Order);
 					Debug.WriteLine("Weight: " + bunny.Weight);
+					Debug.WriteLine("Gender: " + bunny.Gender.ToString());
 					break;
 				default:
 					Debug.WriteLine("Unfortunately, " + animal + " is not available for sale");

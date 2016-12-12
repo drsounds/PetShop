@@ -39,7 +39,7 @@ namespace PetShop
 			switch (animalType)
 			{
 				case "cat":
-					Cat cat = new Cat(22, 22, 190);
+					Cat cat = new Cat("Race", false, "test");
 					DepositMoney(cat.Price);
 					money += cat.Price;
 					return cat;
