@@ -11,9 +11,8 @@ namespace PetShop
 		{
 			
 			Debug.WriteLine("Buying a " + animal);
-
+				
 			Animal _animal = shop.SellAnimal(animal);
-			Debug.WriteLine("Brought a " + animal);
 			switch (animal)
 			{
 				case "cat":
@@ -47,15 +46,14 @@ namespace PetShop
 					break;
 				default:
 					Debug.WriteLine("Unfortunately, " + animal + " is not available for sale");
-					break;
+					return;
 
 			}
+			Debug.WriteLine("Brought a " + animal);
 		}
 		public static void Main(string[] args)
 		{
 			Debug.WriteLine(String.Format("Shop cashier is empty: {0}", shop.Money == 0));
-
-
 			BuyAnimal("cat");
 			BuyAnimal("dog");
 			BuyAnimal("bunny");

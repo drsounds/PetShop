@@ -29,6 +29,11 @@ namespace PetShop
 			money += amount;
 		}
 
+		public void SellProduct(IProduct product)
+		{
+			DepositMoney(product.Price);
+		}
+
 		public Animal SellAnimal(string animalType)
 		{
 			switch (animalType)
@@ -40,10 +45,11 @@ namespace PetShop
 					return cat;
 				case "dog":
 					Dog dog = new Dog(22, 22, 20);
-					DepositMoney(dog.Price);
+					SellProduct(dog);
 					return dog;
 				case "bunny":
 					Bunny bunny = new Bunny();
+					SellProduct(bunny);
 					DepositMoney(bunny.Price);
 					return bunny;
 				default:
